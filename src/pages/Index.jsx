@@ -20,10 +20,10 @@ function Index() {
           <input
             type='text'
             onChange={handleChange}
-            className='w-full mb-4 rounded p-2'
+            className='w-[850px] mb-4 rounded p-2'
             placeholder='Paste notation...'
           />
-          <ImgMapper input={input} />
+          <ImgMapper input={notation.toUpperCase()} />
         </div>
       </div>
     </>

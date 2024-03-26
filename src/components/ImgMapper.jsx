@@ -5,12 +5,33 @@ import React from 'react'
 const ImageMapper = ({ input }) => {
   // Define a mapping between characters and corresponding image sources
   const imageMap = {
-    M: `/notation/M'.png`,
-    L: `/notation/L'.png`,
-    R: '/notation/R.png',
-    U: `/notation/U'.png`,
-    "U'": `/notation/cube.png`,
+    "D'": `/notation/D'.png`,
+    D: `/notation/D.png`,
+    "B'": `/notation/B'.png`,
+    B: `/notation/B.png`,
+    "E'": `/notation/E'.png`,
+    E: `/notation/E.png`,
+    "F'": `/notation/F'.png`,
+    F: `/notation/F.png`,
+    "L'": `/notation/L'.png`,
+    L: `/notation/L.png`,
+    "M'": `/notation/M'.png`,
+    M: `/notation/M.png`,
+    "R'": `/notation/R'.png`,
+    R: `/notation/R.png`,
+    "S'": `/notation/S'.png`,
+    S: `/notation/S.png`,
+    "U'": `/notation/U'.png`,
+    U: `/notation/U.png`,
+    "X'": `/notation/X'.png`,
+    X: `/notation/X.png`,
+    "Y'": `/notation/Y'.png`,
+    Y: `/notation/Y.png`,
+    "Z'": `/notation/Z'.png`,
+    Z: `/notation/Z.png`,
   }
+
+  // DBEFLMRSUXYZ
 
   const parseInput = (input) => {
     const characters = []
@@ -48,7 +69,7 @@ const ImageMapper = ({ input }) => {
       }
     })
   }
-  return <div className='flex flex-row gap-4'>{renderImages()}</div>
+  return <div className='grid grid-cols-6 gap-4'>{renderImages()}</div>
 }
 
 export default ImageMapper

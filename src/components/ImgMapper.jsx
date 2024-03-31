@@ -2,7 +2,8 @@ import React from 'react'
 
 // import x from '../../public/notation/'
 
-const ImageMapper = ({ input }) => {
+const ImageMapper = ({ input, userInput }) => {
+  console.log(input)
   // Define a mapping between characters and corresponding image sources
   const imageMap = {
     "D'": `/notation/D'.png`,
@@ -53,23 +54,32 @@ const ImageMapper = ({ input }) => {
     return characters
   }
 
-  // Function to render images based on parsed characters
   const renderImages = () => {
     const characters = parseInput(input)
 
     return characters.map((char, index) => {
-      // If character mapping exists, render the corresponding image
       if (imageMap[char]) {
         return (
-          <img key={index} src={imageMap[char]} alt={char} className='h-32' />
+          <img
+            key={index}
+            src={imageMap[char]}
+            alt={char}
+            className='h-32 bg-white'
+          />
         )
       } else {
-        // Handle characters without mappings (optional)
         return <span key={index}>{char}</span>
       }
     })
   }
-  return <div className='grid grid-cols-6 gap-4'>{renderImages()}</div>
+  return (
+    <div className=''>
+      <p className='my-4 font-bold text-2xl border-b'>
+        {userInput.replace(/[^\s+()DBEFLMRSUXYZ2']/g, '')}
+      </p>
+      <div className='grid grid-cols-6 gap-4'>{renderImages()}</div>
+    </div>
+  )
 }
 
 export default ImageMapper

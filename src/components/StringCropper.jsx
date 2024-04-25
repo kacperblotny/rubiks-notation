@@ -10,3 +10,6 @@ function StringCropper(input) {
 }
 
 export default StringCropper
+
+
+

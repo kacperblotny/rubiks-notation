@@ -13,7 +13,8 @@ function Index() {
     setUserInput(event.target.value)
   }
 
-  const input = `U U' M R`
+  const input = `F U R B L (D F' U' R' B') L' D'`
+
   return (
     <>
       <div className='flex mx-auto pt-32'>

@@ -1,7 +1,5 @@
 import React from 'react'
 
-// import x from '../../public/notation/'
-
 const ImageMapper = ({ input, userInput }) => {
   console.log(input)
   // Define a mapping between characters and corresponding image sources
@@ -72,11 +70,10 @@ const ImageMapper = ({ input, userInput }) => {
       }
     })
   }
+
   return (
     <div className=''>
-      <p className='my-4 font-bold text-2xl border-b'>
-        {userInput.replace(/[^\s+()DBEFLMRSUXYZ2']/g, '')}
-      </p>
+      <p className='my-4 font-bold text-2xl border-b'>{userInput}</p>
       <div className='grid grid-cols-6 gap-4'>{renderImages()}</div>
     </div>
   )
